@@ -1,0 +1,30 @@
+{
+  "name": "getcopyright",
+  "version": "1.0.0",
+  "description": "Get copyright updated as a string with a simple javascript function",
+  "main": "index.min.js",
+  "scripts": {
+    "build": "uglifyjs index.js -c -m -o index.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nathan-pichon/getCopyright.git"
+  },
+  "keywords": [
+    "copyright",
+    "javascript",
+    "function",
+    "global",
+    "html",
+    "browser"
+  ],
+  "author": "Nathan Pichon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/nathan-pichon/getCopyright/issues"
+  },
+  "homepage": "https://github.com/nathan-pichon/getCopyright#readme",
+  "dependencies": {
+    "uglify-js": "^3.6.0"
+  }
+}

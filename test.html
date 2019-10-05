@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test of get copyright</title>
+    <script type="application/javascript" src="index.js"></script>
+</head>
+<body>
+    <span id="copyright"></span><br/>
+    <span id="copyrightOptionUppercase"></span><br/>
+    <span id="copyrightOptionExtra"></span><br/>
+    <span id="copyrightOptionUpEx"></span><br/>
+    <span id="copyrightSimple"></span>
+</body>
+<script type="application/javascript">
+    document.getElementById("copyright").innerHTML = getFullCopyright();
+    document.getElementById("copyrightOptionUppercase").innerHTML = getFullCopyright({uppercase: true});
+    document.getElementById("copyrightOptionExtra").innerHTML = getFullCopyright({extra: "Extra"});
+    document.getElementById("copyrightOptionUpEx").innerHTML = getFullCopyright({uppercase: true, extra: "Extra"});
+    document.getElementById("copyrightSimple").innerHTML = getCopyright();
+</script>
+</html>
