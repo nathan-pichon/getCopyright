@@ -1,6 +1,4 @@
 (function (window) {
-    if (!window) return;
-
     /**
      * Get the full string of Copyright
      * @param {Object} [options] - Options that can be used
@@ -8,7 +6,7 @@
      * @param {string} [options.extra] - Extra text inserted inside the result string
      * @returns {string} - Copyright (+ extra) + © + current year
      */
-    window.getFullCopyright = function(options) {
+    function getFullCopyright(options) {
         var result = ["Copyright"];
 
         options = options || {};
@@ -18,19 +16,24 @@
         }
 
         if (options.uppercase) {
-            result = result.map(function(str) {
+            result = result.map(function (str) {
                 return str.toLocaleUpperCase();
             });
         }
 
-        return  result.join(" ") + " " + window.getCopyright();
-    };
+        return result.join(" ") + " " + getCopyright();
+    }
 
     /**
      * Get the string of Copyright
      * @returns {string} - © + current year
      */
-    window.getCopyright = function() {
+    function getCopyright() {
         return "©" + new Date().getFullYear();
-    };
+    }
+
+    if (!window) return;
+
+    window.getFullCopyright = getFullCopyright;
+    window.getCopyright = getCopyright;
 })(window);

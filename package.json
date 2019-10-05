@@ -4,7 +4,8 @@
   "description": "Get copyright updated as a string with a simple javascript function",
   "main": "index.min.js",
   "scripts": {
-    "build": "uglifyjs index.js -c -m -o index.min.js"
+    "build": "uglifyjs index.js -c -m -o index.min.js",
+    "doc": "jsdoc2md index.js > README.md"
   },
   "repository": {
     "type": "git",
@@ -26,5 +27,8 @@
   "homepage": "https://github.com/nathan-pichon/getCopyright#readme",
   "dependencies": {
     "uglify-js": "^3.6.0"
+  },
+  "devDependencies": {
+    "jsdoc-to-markdown": "^5.0.1"
   }
 }
